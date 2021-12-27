@@ -65,17 +65,19 @@
     "@emotion/css": "^11.5.0",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
+    "axios": "^0.24.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2",
     "typescript": "^4.4.4"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "*.{js, jsx, ts,tsx}": [
       "eslint ./src --fix"
     ],
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "*.{js, jsx, ts, tsx}": "eslint --cache --fix",
+    "*.{js, jsx, ts, tsx, css,md}": "prettier --write"
   },
   "jest": {
     "moduleNameMapper": {
