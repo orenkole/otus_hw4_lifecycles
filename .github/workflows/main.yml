@@ -3,7 +3,7 @@ name: Upload Website
 on:
  push:
    branches:
-     - hw_4_lifecycles
+     - hw4_code
 
 jobs:
  Deploy:
