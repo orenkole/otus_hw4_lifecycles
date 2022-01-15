@@ -1,17 +1,17 @@
-import React from "react";
-import {ListPropsType} from "../List/index";
-import { listItemStyle } from "./style";
+import React from 'react';
+import { ListPropsType } from '../List/index';
+import { listItemStyle } from './style';
 
-type StateType = {};
+type StateType = Record<string, unknown>;
 
-export type ListItemPropsType = {item: ListPropsType['items'][number]};
+export type ListItemPropsType = { item: ListPropsType['items'][number] };
 
 class ListItem extends React.Component<ListItemPropsType, StateType> {
-	constructor(props: ListItemPropsType) {
-		super(props);
-	}
+  constructor(props: ListItemPropsType) {
+    super(props);
+  }
 
-	shouldComponentUpdate(nextProps: ListItemPropsType) {  
+  shouldComponentUpdate(nextProps: ListItemPropsType) {
     if (nextProps.item.id !== this.props.item.id) {
       return true;
     } else {
@@ -19,13 +19,13 @@ class ListItem extends React.Component<ListItemPropsType, StateType> {
     }
   }
 
-	render() {
-		return (
-			<li key={this.props.item.id} css={listItemStyle}>
-				{this.props.item.body}
-			</li>
-		)
-	}
+  render() {
+    return (
+      <li key={this.props.item.id} css={listItemStyle}>
+        {this.props.item.body}
+      </li>
+    );
+  }
 }
 
-export {ListItem};
+export { ListItem };
