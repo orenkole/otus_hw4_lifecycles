@@ -7,10 +7,6 @@ type StateType = Record<string, unknown>;
 export type ListItemPropsType = { item: ListPropsType['items'][number] };
 
 class ListItem extends React.Component<ListItemPropsType, StateType> {
-  constructor(props: ListItemPropsType) {
-    super(props);
-  }
-
   shouldComponentUpdate(nextProps: ListItemPropsType) {
     if (nextProps.item.id !== this.props.item.id) {
       return true;
