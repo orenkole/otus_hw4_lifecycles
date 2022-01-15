@@ -11,10 +11,7 @@ export type CounterPropsType = {
 
 type CounterStateType = {};
 
-class Counter extends React.Component<CounterPropsType, CounterStateType> {
-	constructor(props: CounterPropsType) {
-		super(props)
-	}
+export class Counter extends React.Component<CounterPropsType, CounterStateType> {
 
 	shouldComponentUpdate(nextProps: any) {  
     if (nextProps.value === this.props.value) return false;
@@ -31,5 +28,3 @@ class Counter extends React.Component<CounterPropsType, CounterStateType> {
     );
 	}
 }
-
-export {Counter}

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { AddItemsButton } from "../AddItemsButton";
+import {AddItemsButton} from "../AddItemsButton";
 import { Counter } from "../Counter";
 import { List } from "../List";
 
@@ -20,7 +20,7 @@ export type AppStateType = {
 
 type AppPropsType = {}
 
-class App extends React.Component<AppPropsType, AppStateType>{
+export class App extends React.Component<AppPropsType, AppStateType>{
 	private timerId: undefined | number = undefined;
 	constructor(props: AppPropsType) {
 		super(props);
@@ -83,5 +83,3 @@ class App extends React.Component<AppPropsType, AppStateType>{
 		)
 	}
 }
-
-export {App};
