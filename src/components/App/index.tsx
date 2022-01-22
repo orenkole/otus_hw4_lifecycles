@@ -3,7 +3,7 @@ import React from 'react';
 import { AddItemsButton } from '../AddItemsButton';
 import { Counter } from '../Counter';
 import { List } from '../List';
-
+// test autoformat
 export type PostType = {
   id: number;
   body: string;
